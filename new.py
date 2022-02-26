@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-vid_obj = cv2.VideoCapture("Lemon.mp4")
+vid_obj = cv2.VideoCapture("touhou-bad-apple-touhou.gif")
 
 go_on = True
 while go_on:
@@ -18,7 +18,7 @@ while go_on:
         for x in y:
             pixcount+=1
             thresh=127
-            if ((x[0]>thresh) and ((x[1]>thresh) and (x[2]>thresh))):
+            if ((x[0]>thresh) or ((x[1]>thresh) or (x[2]>thresh))):
                 whitecount+=1
             else:
                 blackcount+=1
